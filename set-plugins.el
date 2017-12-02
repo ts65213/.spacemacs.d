@@ -51,7 +51,7 @@
 
 ;;-------------------------------------------------------------------------------------yasnippet
 (setq yas-snippet-dirs
-	  '("~/my-config/snippets"))  ;;yasnippet模板目录
+	  '("~/.spacemacs.d/snippets"))  ;;yasnippet模板目录
 
 (defun yas-advise-indent-function (function-symbol)
   (eval `(defadvice ,function-symbol (around yas-try-expand-first activate)
