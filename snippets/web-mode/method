@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: method
+# key: method
+# --
+method="$0"

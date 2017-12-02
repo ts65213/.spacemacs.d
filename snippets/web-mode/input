@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: input
+# key: input
+# --
+<input id="$1" class="$2" type="$3" value="$4" placeholder="$5" name="data[$6]" />

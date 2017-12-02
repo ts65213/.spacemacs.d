@@ -1,0 +1,5 @@
+# -*- mode: php -*-
+# name: query
+# key: query
+# --
+$this->db->query('$1')->result();

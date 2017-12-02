@@ -1,0 +1,5 @@
+# -*- mode: php -*-
+# name: assign
+# key: assign
+# --
+$this->template->assign(array($0));

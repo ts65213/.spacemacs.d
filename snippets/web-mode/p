@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: p
+# key: p
+# --
+<p id="$1" class="$2">$0</p>

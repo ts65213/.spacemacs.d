@@ -1,0 +1,5 @@
+# -*- mode: php -*-
+# name: display
+# key: display
+# --
+$this->template->display('$0');

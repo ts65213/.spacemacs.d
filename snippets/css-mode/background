@@ -1,0 +1,5 @@
+# -*- mode: css -*-
+# name: background url no-repeat
+# key: bg
+# --
+background:url('../img/$1') no-repeat 0$2px 0$3px;

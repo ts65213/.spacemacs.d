@@ -1,0 +1,8 @@
+# -*- mode: html -*-
+# name: var_dump
+# key: vd
+# --
+<pre><?php
+   var_dump($0);
+?></pre>
+<?php exit; ?>

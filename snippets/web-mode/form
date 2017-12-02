@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: form
+# key: form
+# --
+<form id="$1" class="$2" action="$3" method="post$4">$0</form>

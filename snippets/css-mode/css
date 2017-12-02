@@ -1,0 +1,16 @@
+# -*- mode: css -*-
+# name: css
+# key: css
+# --
+* {
+	padding:0;
+	margin:0;
+	font-family: 'Microsoft Yahei','微软雅黑','Roboto', Arial, Verdana !important;
+}
+.clear {clear:both;}
+.left {float:left;}
+.right {float:right;}
+.shou {cursor:pointer;}
+.center {margin:0 auto;}
+ul{list-style-type:none;}
+a{text-decoration:none;}

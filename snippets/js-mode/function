@@ -1,0 +1,5 @@
+# -*- mode: js -*-
+# name: ff  --  function(){}
+# key: ff
+# --
+function($1){$0}

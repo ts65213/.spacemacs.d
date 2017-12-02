@@ -1,0 +1,7 @@
+# -*- mode: c++ -*-
+# name:fore  --  for(int i=0; i<=n; i++)
+# key: fore
+# --
+for(int ${1:i}=${2:0}; $1<=${3:n}; $1++) {
+	$0
+}

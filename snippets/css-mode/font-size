@@ -1,0 +1,5 @@
+# -*- mode: css -*-
+# name: font-size
+# key: fs
+# --
+font-size:${1:16}px;

@@ -1,0 +1,5 @@
+# -*- mode: css -*-
+# name: nth-child
+# key: nc
+# --
+nth-child($0)

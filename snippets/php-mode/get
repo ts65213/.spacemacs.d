@@ -1,0 +1,5 @@
+# -*- mode: php -*-
+# name: $_GET['']
+# key: get
+# --
+$_GET['$0']

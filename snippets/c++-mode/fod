@@ -1,0 +1,7 @@
+# -*- mode: c++ -*-
+# name: fod  --  for(int i=n; i>0; i--)
+# key: fod
+# --
+for(int ${1:i}=${2:n}; $1>${3:0}; $1--) {
+	$0
+}

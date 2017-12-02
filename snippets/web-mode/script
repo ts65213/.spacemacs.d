@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: script
+# key: script
+# --
+<script type="text/javascript" src="{THEME_PATH}my/js/$0.js"></script>

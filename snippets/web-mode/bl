@@ -1,0 +1,12 @@
+# -*- mode: html -*-
+# name: bianliang
+# key: bl
+# --
+<div class="center"><pre><?php 
+	$abc = get_defined_vars();    //已定义变量
+	foreach($abc as $k=>$v) {
+		if($k=='ci') continue;        //$abc[ci]内容太长
+  print_r("<br/><span style='color:red;width:180px;display:inline-block;'>$k</span> ");
+  print_r($v);
+	}
+?></pre></div>

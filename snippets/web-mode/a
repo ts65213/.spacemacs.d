@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: a
+# key: a
+# --
+<a id="$1" class="$2" href="$3">$0</a>

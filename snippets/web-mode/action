@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: action
+# key: action
+# --
+action="$0"

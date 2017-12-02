@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: ul
+# key: ul
+# --
+<ul id="$1" class="$2">$0</ul>

@@ -1,0 +1,5 @@
+# -*- mode: c++ -*-
+# name:vv  --   vector<int> a;
+# key: vv
+# --
+vector<${1:int}> $2;$0

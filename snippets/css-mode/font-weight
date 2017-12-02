@@ -1,0 +1,5 @@
+# -*- mode: css -*-
+# name: font-weight
+# key: fw
+# --
+font-weight:bold;

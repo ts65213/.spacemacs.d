@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: id
+# key: id
+# --
+id="$1"$0

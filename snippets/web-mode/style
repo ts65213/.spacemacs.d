@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: style
+# key: style
+# --
+<link rel="stylesheet" type="text/css" href="{THEME_PATH}my/css/$0.css" />

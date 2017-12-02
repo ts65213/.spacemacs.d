@@ -1,0 +1,5 @@
+# -*- mode: css -*-
+# name: box-sizing
+# key: bs
+# --
+box-sizing:border-box;

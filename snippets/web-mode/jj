@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: mubanbianliang
+# key: jj
+# --
+\{\$${1:t}['$0']\}

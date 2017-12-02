@@ -1,0 +1,5 @@
+# -*- mode: css -*-
+# name: nth-of-type
+# key: not
+# --
+nth-of-type($0)

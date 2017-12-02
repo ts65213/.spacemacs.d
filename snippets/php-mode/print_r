@@ -1,0 +1,8 @@
+# -*- mode: php -*-
+# name: print_r
+# key: pr
+# --
+echo '<pre>';
+print_r($0);
+echo '</pre>';
+exit;

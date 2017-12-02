@@ -1,0 +1,8 @@
+# -*- mode: html -*-
+# name: print_r
+# key: pr
+# --
+<pre><?php
+   print_r($0);
+?></pre>
+<?php exit; ?>

@@ -1,0 +1,5 @@
+# -*- mode: c++ -*-
+# name: pp  --  printf("%d\n", a);
+# key: pp
+# --
+printf("$1\n"$2)$0

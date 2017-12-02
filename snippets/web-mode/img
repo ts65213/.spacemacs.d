@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: img
+# key: img
+# --
+<img id="$1" class="$2" src="{THEME_PATH}my/img/$3" />$0

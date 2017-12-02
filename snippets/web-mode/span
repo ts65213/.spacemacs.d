@@ -1,0 +1,5 @@
+# -*- mode: html -*-
+# name: span
+# key: span
+# --
+<span id="$1" class="$2">$0</span>

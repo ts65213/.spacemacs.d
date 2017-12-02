@@ -1,0 +1,5 @@
+# -*- mode: c++ -*-
+# name: ss  --  scanf("%d", &a);
+# key: ss
+# --
+scanf("%${1:d}", &$2)$0

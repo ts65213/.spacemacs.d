@@ -1,0 +1,7 @@
+# -*- mode: c++ -*-
+# name: while  --  while(){}
+# key: while
+# --
+while($1) {
+	$1
+}
