@@ -9,16 +9,16 @@
 
 (setq ibuffer-saved-filter-groups     ;;分组
       (quote (("default"
-               ("other-php" (mode . php-mode))
-               ("javascript" (mode . js2-mode))
-               ("css" (mode . css-mode))
-               ("org" (mode . org-mode))
-               ("lisp" (mode . emacs-lisp-mode)
 			   ("controller" (filename . "controllers"))
 			   ("models" (filename . "models"))
                ("html" (filename . "views"))
+               ("javascript" (mode . js2-mode))
+               ("css" (mode . css-mode))
+               ("other-php" (mode . php-mode))
+               ("org" (mode . org-mode))
+               ("lisp" (mode . emacs-lisp-mode))
                ("conf" (filename . "conf"))
-			   )))))
+			   ))))
 
 (add-hook 'ibuffer-mode-hook
           (lambda ()
