@@ -28,7 +28,7 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)                                   ;;ibuffer
 
 ;;#################################################################################################### 光标
-(global-set-key (kbd "C-j") 'evil-ace-jump-char-mode)                       ;;ace-jump-mode
+(global-set-key (kbd "C-j") 'avy-goto-char)                                 ;;avy-goto-char
 
 (global-set-key (kbd "M-l") 'move-to-window-line-top-bottom)                ;;移动光标 顶部/中间/底部
 (global-set-key (kbd "C-M-l") 'centered-cursor-mode)                        ;;光标固定在中间

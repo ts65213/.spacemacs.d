@@ -56,7 +56,6 @@ This function should only modify configuration layer settings."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
-									  ace-jump-mode
                                       symbol-overlay
 									  ggtags
 									  parinfer
@@ -67,9 +66,10 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
+									ace-window
+									neotree
 									emmet-mode
 									occur
-									neotree
    )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -367,17 +367,17 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
       '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
         ("org-cn"   . "http://elpa.emacs-china.org/org/")
         ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
-		  
+
 ;;------------------------------------------------------------------------------------------------加快启动速度
   (setq tramp-ssh-controlmaster-options
         "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
   )
 
 (defun dotspacemacs/user-config ()
@@ -390,7 +390,7 @@ before packages are loaded."
 
 
   ;;(setenv "HOME" "c:/Users/jian.wang")
-  
+
   (add-to-list 'load-path "~/.spacemacs.d/")
   (require 'better-defaults)    ;;默认值
   (require 'my-function)        ;;自定义函数
