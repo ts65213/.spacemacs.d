@@ -7,22 +7,22 @@
   <head>
 	<meta charset="utf-8">
 	<title>$1</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/header.css" />
-	<script type="text/javascript" src="js/jquery.min.js"></script>
 
-	<style type="text/css"> 
-		
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<style type="text/css">
+
 	</style>
-	
+
 	<script>
 	  $(function(){
-		
+
 	  });
 	</script>
   </head>
-  
+
   <body id="body">
-  
+
   </body>
 </html>
