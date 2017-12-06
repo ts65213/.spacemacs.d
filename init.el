@@ -46,8 +46,8 @@ This function should only modify configuration layer settings."
 	 treemacs
      org
      (shell :variables
-		shell-default-height 30
-		shell-default-position 'bottom)
+			shell-default-height 30
+			shell-default-position 'bottom)
      syntax-checking
      ;; version-control
      )
@@ -61,16 +61,42 @@ This function should only modify configuration layer settings."
 									  parinfer
 									  youdao-dictionary
 									  pt
-   )
+									  )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-									ace-window
-									neotree
-									emmet-mode
-									occur
-   )
+									ac-ispell                       ;;auto-complete的拼写提示    用不到
+									ace-jump-helm-line              ;;helm session里用avy跳转    用不到
+									ace-link                        ;;用avy选择link    用不到
+									aggressive-indent               ;;控制缩进  C-M-\即可   用不到
+									auto-complete                   ;;自动补全  company更好
+									coffee-mode                     ;;CoffeeScript major-mode   用不到
+									diminish                        ;;modeline隐藏某minor-mode   用不到
+									drupal-mode                     ;;drupal minor-mode   用不到
+									emmet-mode                      ;;html的模板 div>ul>li*3等  用不到
+									evil-mc                         ;;evil多光标   multiple-cursors更好
+									gitattributes-mode              ;;.gitattributes文件 major-mode   用不到
+									gitconfig-mode                  ;;.gitconfig文件 major-mode   用不到
+									gitignore-mode                  ;;.gitignore文件 major-mode   用不到
+									haml-mode                       ;;haml major-mode  html模板  用不到
+									helm-gitignore                  ;;自动？生成.gitignore   用不到
+									highlight-numbers               ;;高亮数字？   用不到
+									json-mode                       ;;json major-mode   用不到
+									less-css-mode                   ;;less major-mode   用不到
+									linum-relative                  ;;相对行号   用不到
+									neotree                         ;;文件树  treemacs更好
+									parent-mode                     ;;找mode的parent mode？   用不到
+									pug-mode                        ;;pug  major-mode   用不到
+									sass-mode                       ;;sass major-mode   用不到
+									scss-mode                       ;;scss major-mode   用不到
+									slim-mode                       ;;slim major-mode   用不到
+									;;ace-window                    ;;选择window  被treemacs依赖
+									;;alert                         ;;被org-pomodoro依赖
+									;;clean-aindent-mode            ;;回车newline-and-indent 无内容则删除indent  有用
+									;;multiple-cursors              ;;多光标  有用
+									;;org-pomodoro                  ;;org番茄   有用
+									)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and deletes any unused
@@ -363,12 +389,12 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
 
 
-(setq configuration-layer-elpa-archives
-      '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
-        ("org-cn"   . "http://elpa.emacs-china.org/org/")
-        ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+  (setq configuration-layer-elpa-archives
+		'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+		  ("org-cn"   . "http://elpa.emacs-china.org/org/")
+		  ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
 
-;;------------------------------------------------------------------------------------------------加快启动速度
+  ;;------------------------------------------------------------------------------------------------加快启动速度
   (setq tramp-ssh-controlmaster-options
         "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
@@ -409,18 +435,18 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (youdao-dictionary names chinese-word-at-point xterm-color web-mode web-beautify unfill treemacs-projectile treemacs pfuture tagedit symbol-overlay smeargle slim-mode shell-pop scss-mode sass-mode pug-mode pt phpunit phpcbf php-extras php-auto-yasnippets parinfer orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-download org-brain mwim multi-term magit-gitflow livid-mode skewer-mode less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc impatient-mode simple-httpd htmlize helm-gitignore helm-css-scss helm-company helm-c-yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip pos-tip flycheck evil-visual-mark-mode evil-org evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help drupal-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-php ac-php-core xcscope php-mode company coffee-mode auto-yasnippet yasnippet ace-jump-mode ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
+  (custom-set-variables
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(package-selected-packages
+	 (quote
+	  (youdao-dictionary names chinese-word-at-point xterm-color web-mode web-beautify unfill treemacs-projectile treemacs pfuture tagedit symbol-overlay smeargle slim-mode shell-pop scss-mode sass-mode pug-mode pt phpunit phpcbf php-extras php-auto-yasnippets parinfer orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-download org-brain mwim multi-term magit-gitflow livid-mode skewer-mode less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc impatient-mode simple-httpd htmlize helm-gitignore helm-css-scss helm-company helm-c-yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip pos-tip flycheck evil-visual-mark-mode evil-org evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help drupal-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-php ac-php-core xcscope php-mode company coffee-mode auto-yasnippet yasnippet ace-jump-mode ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   )
+  )
