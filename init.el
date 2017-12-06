@@ -96,7 +96,6 @@ This function should only modify configuration layer settings."
 									;;clean-aindent-mode            ;;回车newline-and-indent 无内容则删除indent  有用
 									;;multiple-cursors              ;;多光标  有用
 									;;org-pomodoro                  ;;org番茄   有用
-									
 									)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
