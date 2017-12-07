@@ -20,10 +20,11 @@
 
 (setq tramp-default-method "plink")                    ;;tramp-mode  使用plink
 
-(setq avy-keys '(?z ?b ?c ?x ?e ?w ?g                  ;;avy-goto-char 的按键
-					?h ?i ?v ?u ?t ?m ?n
-					?o ?p ?q ?r ?y ?a
-					?l ?s ?k ?d ?j ?f))
+(setq avy-keys '(?a ?b ?c ?d ?e ?f ?g                  ;;avy-goto-char 的按键
+					?h ?i          ?m ?n
+					?o ?p ?q ?r ?s ?t
+					?u ?v ?w    ?y
+					?l ?k ?j))
 
 (setq auto-mode-alist									;;路径中有'views' 使用web-mode
 	(append '(("/views/" . web-mode))
