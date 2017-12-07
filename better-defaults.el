@@ -12,7 +12,9 @@
 ;;(setq-default cursor-type 'bar)			           ;;设置光标为竖线
 (setq evil-emacs-state-cursor '("green" bar))
 
-(setq make-backup-files nil)                           ;;不生成临时文件  没效果？
+(setq make-backup-files nil)                           ;;不生成 backup~
+(setq auto-save-default nil)                           ;;不生成 #autosave#
+(setq auto-save-visited-file-name t)                   ;;不生成 .#file_Name
 
 (setq frame-title-format "emacs@%b")                   ;;窗口title显示buffer名
 
