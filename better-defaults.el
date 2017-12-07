@@ -12,16 +12,19 @@
 ;;(setq-default cursor-type 'bar)			           ;;设置光标为竖线
 (setq evil-emacs-state-cursor '("green" bar))
 
-(setq make-backup-files nil)                           ;;不生成临时文件  没效果？
+(setq make-backup-files nil)                           ;;不生成 backup~
+(setq auto-save-default nil)                           ;;不生成 #autosave#
+(setq auto-save-visited-file-name t)                   ;;不生成 .#file_Name
 
 (setq frame-title-format "emacs@%b")                   ;;窗口title显示buffer名
 
 (setq tramp-default-method "plink")                    ;;tramp-mode  使用plink
 
-(setq avy-keys '(?z ?b ?c ?x ?e ?w ?g                  ;;avy-goto-char 的按键
-					?h ?i ?v ?u ?t ?m ?n
-					?o ?p ?q ?r ?y ?a
-					?l ?s ?k ?d ?j ?f))
+(setq avy-keys '(?a ?b ?c ?d ?e ?f ?g                  ;;avy-goto-char 的按键
+					?h ?i          ?m ?n
+					?o ?p ?q ?r ?s ?t
+					?u ?v ?w    ?y
+					?l ?k ?j))
 
 (setq auto-mode-alist									;;路径中有'views' 使用web-mode
 	(append '(("/views/" . web-mode))
