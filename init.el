@@ -66,37 +66,67 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-									ac-ispell                       ;;auto-complete的拼写提示    用不到
-									ace-jump-helm-line              ;;helm session里用avy跳转    用不到
-									ace-link                        ;;用avy选择link    用不到
-									aggressive-indent               ;;控制缩进  C-M-\即可   用不到
+									;;############################  一定不会用到
+									ac-ispell                       ;;auto-complete的拼写提示
+									ace-jump-helm-line              ;;helm session里用avy跳转
+									ace-link                        ;;用avy选择link
+									aggressive-indent               ;;控制缩进  C-M-\即可
 									auto-complete                   ;;自动补全  company更好
-									coffee-mode                     ;;CoffeeScript major-mode   用不到
-									diminish                        ;;modeline隐藏某minor-mode   用不到
-									drupal-mode                     ;;drupal minor-mode   用不到
-									emmet-mode                      ;;html的模板 div>ul>li*3等  用不到
+									coffee-mode                     ;;CoffeeScript major-mode
+									diminish                        ;;modeline隐藏某minor-mode
+									drupal-mode                     ;;drupal minor-mode
+									emmet-mode                      ;;html的模板 div>ul>li*3等
 									evil-mc                         ;;evil多光标   multiple-cursors更好
-									gitattributes-mode              ;;.gitattributes文件 major-mode   用不到
-									gitconfig-mode                  ;;.gitconfig文件 major-mode   用不到
-									gitignore-mode                  ;;.gitignore文件 major-mode   用不到
-									haml-mode                       ;;haml major-mode  html模板  用不到
-									helm-gitignore                  ;;自动？生成.gitignore   用不到
-									highlight-numbers               ;;高亮数字？   用不到
-									json-mode                       ;;json major-mode   用不到
-									less-css-mode                   ;;less major-mode   用不到
-									linum-relative                  ;;相对行号   用不到
+									gitattributes-mode              ;;.gitattributes文件 major-mode
+									gitconfig-mode                  ;;.gitconfig文件 major-mode
+									gitignore-mode                  ;;.gitignore文件 major-mode
+									haml-mode                       ;;haml major-mode  html模板
+									helm-gitignore                  ;;自动？生成.gitignore
+									helm-themes                     ;;主题
+									highlight-numbers               ;;高亮数字？
+									htmlize                         ;;将当前buffer转化为html文件
+									impatient-mode                  ;;实时显示静态web页面
+									indent-guide                    ;;在左侧加一条对齐竖线
+									js-doc                          ;;给js加注释
+									js2-refactor                    ;;js重构
+									json-mode                       ;;json major-mode
+									json-snatcher                   ;;json里的path
+									less-css-mode                   ;;less major-mode
+									link-hint                       ;;avy打开链接
+									linum-relative                  ;;相对行号
+									livid-mode                      ;;实时显示静态web页面
+									log4e                           ;;elisp打日志
+									lorem-ipsum                     ;;插入文章，看排版、字体效果
+									magit-gitflow                   ;;gitflow扩展
 									neotree                         ;;文件树  treemacs更好
-									parent-mode                     ;;找mode的parent mode？   用不到
-									pug-mode                        ;;pug  major-mode   用不到
-									sass-mode                       ;;sass major-mode   用不到
-									scss-mode                       ;;scss major-mode   用不到
-									slim-mode                       ;;slim major-mode   用不到
+									parent-mode                     ;;找mode的parent mode？
+									pug-mode                        ;;pug  major-mode
+									sass-mode                       ;;sass major-mode
+									scss-mode                       ;;scss major-mode
+									simple-httpd                    ;;web服务器
+									skewer-mode                     ;;实时显示静态web页面 js求值
+									slim-mode                       ;;slim major-mode
+
+
+									;;############################  可能会用到
+
+
+
+									;;############################  作用不明或被依赖
+									;;multi-term                    ;;管理多个terminal？
 									;;ace-window                    ;;选择window  被treemacs依赖
 									;;alert                         ;;被org-pomodoro依赖
-									;;clean-aindent-mode            ;;回车newline-and-indent 无内容则删除indent  有用
-									;;multiple-cursors              ;;多光标  有用
-									;;org-pomodoro                  ;;org番茄   有用
-									
+
+
+
+									;;############################  保留
+									;;clean-aindent-mode            ;;回车newline-and-indent 无内容则删除indent
+									;;move-text                     ;;上下移动文本
+									;;multiple-cursors              ;;多光标
+									;;mwim                          ;;C-a C-e
+									;;org-pomodoro                  ;;org番茄
+									;;spaceline                     ;;定制mode-line
+
 									)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -436,18 +466,18 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-  (custom-set-variables
-   ;; custom-set-variables was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(package-selected-packages
-	 (quote
-	  (youdao-dictionary names chinese-word-at-point xterm-color web-mode web-beautify unfill treemacs-projectile treemacs pfuture tagedit symbol-overlay smeargle slim-mode shell-pop scss-mode sass-mode pug-mode pt phpunit phpcbf php-extras php-auto-yasnippets parinfer orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-download org-brain mwim multi-term magit-gitflow livid-mode skewer-mode less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc impatient-mode simple-httpd htmlize helm-gitignore helm-css-scss helm-company helm-c-yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip pos-tip flycheck evil-visual-mark-mode evil-org evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help drupal-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-php ac-php-core xcscope php-mode company coffee-mode auto-yasnippet yasnippet ace-jump-mode ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   )
-  )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (spaceline powerline youdao-dictionary xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill treemacs-projectile toc-org tagedit symon symbol-overlay string-inflection smeargle shell-pop restart-emacs request rainbow-delimiters pt popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el password-generator parinfer paradox orgit org-projectile org-present org-pomodoro org-download org-bullets org-brain open-junk-file mwim multi-term move-text magit-gitflow macrostep lorem-ipsum link-hint json-snatcher js2-refactor js-doc info+ indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump define-word company-web company-tern company-statistics company-php column-enforce-mode clean-aindent-mode auto-yasnippet auto-highlight-symbol auto-compile adaptive-wrap 2048-game))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
