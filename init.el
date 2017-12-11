@@ -76,6 +76,7 @@ This function should only modify configuration layer settings."
 									diminish                        ;;modeline隐藏某minor-mode
 									drupal-mode                     ;;drupal minor-mode
 									emmet-mode                      ;;html的模板 div>ul>li*3等
+									evil-lisp-state                 ;;lisp代码的导航
 									evil-mc                         ;;evil多光标   multiple-cursors更好
 									gitattributes-mode              ;;.gitattributes文件 major-mode
 									gitconfig-mode                  ;;.gitconfig文件 major-mode
