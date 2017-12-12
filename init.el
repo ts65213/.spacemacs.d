@@ -108,10 +108,6 @@ This function should only modify configuration layer settings."
 									slim-mode                       ;;slim major-mode
 
 
-									;;############################  可能会用到
-
-
-
 									;;############################  作用不明或被依赖
 									;;multi-term                    ;;管理多个terminal？
 									;;ace-window                    ;;选择window  被treemacs依赖
