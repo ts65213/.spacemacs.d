@@ -67,6 +67,21 @@ This function should only modify configuration layer settings."
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
 									;;############################  一定不会用到
+									pug-mode                        ;;pug  major-mode
+									sass-mode                       ;;sass major-mode
+									scss-mode                       ;;scss major-mode
+									haml-mode                       ;;haml major-mode  html模板
+									json-mode                       ;;json major-mode
+									less-css-mode                   ;;less major-mode
+									slim-mode                       ;;slim major-mode
+									gitattributes-mode              ;;.gitattributes文件 major-mode
+									gitconfig-mode                  ;;.gitconfig文件 major-mode
+									gitignore-mode                  ;;.gitignore文件 major-mode
+
+									simple-httpd                    ;;web服务器
+									livid-mode                      ;;实时显示静态web页面
+									skewer-mode                     ;;实时显示静态web页面 js求值
+
 									ac-ispell                       ;;auto-complete的拼写提示
 									ace-jump-helm-line              ;;helm session里用avy跳转
 									ace-link                        ;;用avy选择link
@@ -77,35 +92,24 @@ This function should only modify configuration layer settings."
 									emmet-mode                      ;;html的模板 div>ul>li*3等
 									evil-lisp-state                 ;;lisp代码的导航
 									evil-mc                         ;;evil多光标   multiple-cursors更好
-									gitattributes-mode              ;;.gitattributes文件 major-mode
-									gitconfig-mode                  ;;.gitconfig文件 major-mode
-									gitignore-mode                  ;;.gitignore文件 major-mode
-									haml-mode                       ;;haml major-mode  html模板
 									helm-gitignore                  ;;自动？生成.gitignore
 									helm-themes                     ;;主题
 									highlight-numbers               ;;高亮数字？
 									htmlize                         ;;将当前buffer转化为html文件
 									impatient-mode                  ;;实时显示静态web页面
+
 									indent-guide                    ;;在左侧加一条对齐竖线
+									linum-relative                  ;;
+
 									js-doc                          ;;给js加注释
 									js2-refactor                    ;;js重构
-									json-mode                       ;;json major-mode
 									json-snatcher                   ;;json里的path
-									less-css-mode                   ;;less major-mode
 									link-hint                       ;;avy打开链接
-									linum-relative                  ;;相对行号
-									livid-mode                      ;;实时显示静态web页面
 									log4e                           ;;elisp打日志
 									lorem-ipsum                     ;;插入文章，看排版、字体效果
 									magit-gitflow                   ;;gitflow扩展
 									neotree                         ;;文件树  treemacs更好
 									parent-mode                     ;;找mode的parent mode？
-									pug-mode                        ;;pug  major-mode
-									sass-mode                       ;;sass major-mode
-									scss-mode                       ;;scss major-mode
-									simple-httpd                    ;;web服务器
-									skewer-mode                     ;;实时显示静态web页面 js求值
-									slim-mode                       ;;slim major-mode
 
 
 									;;############################  作用不明或被依赖
@@ -448,7 +452,6 @@ before packages are loaded."
   (add-to-list 'load-path "~/.spacemacs.d/")
   (require 'better-defaults)    ;;默认值
   (require 'my-function)        ;;自定义函数
-  (require 'set-plugins)        ;;配置插件
   (require 'key-binding)        ;;按键绑定
 
 
