@@ -120,7 +120,7 @@
 ;;-------------------------------------------------------------------------------------company
 (setq company-show-numbers t); 显示序号
 (setq company-idle-delay 0); 菜单延迟
-(setq company-minimum-prefix-length 1); 开始补全字数
+(setq company-minimum-prefix-length 2); 开始补全字数
 
 ;;-------------------------------------------------------------------------------------treemacs
 (setq treemacs-width 25)

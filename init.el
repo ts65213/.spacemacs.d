@@ -38,7 +38,8 @@ This function should only modify configuration layer settings."
 	 javascript
      html
      php
-     helm
+     ;;helm
+	 ivy
      auto-completion
      better-defaults
      emacs-lisp
@@ -473,7 +474,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (diminish youdao-dictionary xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill treemacs-projectile toc-org tagedit symon symbol-overlay string-inflection spaceline smeargle shell-pop restart-emacs request rainbow-delimiters pt popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el password-generator parinfer paradox orgit org-projectile org-present org-pomodoro org-download org-bullets org-brain open-junk-file mwim multi-term move-text macrostep js2-mode info+ hungry-delete hl-todo highlight-parentheses highlight-indentation hide-comnt help-fns+ helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump define-word company-web company-tern company-statistics company-php column-enforce-mode clean-aindent-mode auto-yasnippet auto-highlight-symbol auto-compile adaptive-wrap))))
+    (wgrep smex ivy-purpose ivy-hydra counsel-projectile counsel swiper ivy youdao-dictionary xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill treemacs-projectile toc-org tagedit symon symbol-overlay string-inflection spaceline smeargle smartparens shell-pop restart-emacs request rainbow-delimiters pt popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el password-generator parinfer paradox orgit org-projectile org-present org-pomodoro org-download org-bullets org-brain open-junk-file mwim multi-term move-text macrostep js2-mode info+ hungry-delete hl-todo highlight-parentheses highlight-indentation hide-comnt help-fns+ helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump diminish define-word company-web company-tern company-statistics company-php column-enforce-mode clean-aindent-mode bind-map auto-yasnippet auto-highlight-symbol auto-compile adaptive-wrap))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
