@@ -38,8 +38,8 @@ This function should only modify configuration layer settings."
 	 javascript
      html
      php
-     ;;helm
-	 ivy
+     helm
+	 ;; ivy
      auto-completion
      better-defaults
      emacs-lisp
@@ -82,7 +82,31 @@ This function should only modify configuration layer settings."
 									simple-httpd                    ;;web服务器
 									livid-mode                      ;;实时显示静态web页面
 									skewer-mode                     ;;实时显示静态web页面 js求值
+									impatient-mode                  ;;实时显示静态web页面
 
+									evil-anzu                       ;;搜索或替换时 提示一些信息
+									evil-args                       ;;evil
+									evil-ediff                      ;;增加ediff的vi操作模式
+									evil-escape                     ;;evil 退出编辑或其他状态
+									evil-indent-plus                ;;evil
+									evil-lisp-state                 ;;lisp代码的导航
+									evil-magit                      ;;evil magit
+									evil-matchit                    ;;evil 在配对的东西之间跳转 如<div></div>
+									evil-mc                         ;;多光标   multiple-cursors更好
+									evil-numbers                    ;;增加或减少region里的数字
+									evil-nerd-commenter             ;;注释多行
+									evil-surround                   ;;evil  修改光标外层的引号、括号等
+									evil-exchange                   ;;
+									evil-iedit-state                ;;iedit的evil模式
+									evil-org                        ;;org的evil模式
+
+
+
+									tagedit                         ;;heml标签的增强
+									ws-butler                       ;;去掉行尾的空白符
+									column-enforce-mode             ;;每行不超过80列
+									define-word                     ;;翻译
+									fancy-battery                   ;;显示电池状态
 									ac-ispell                       ;;auto-complete的拼写提示
 									ace-jump-helm-line              ;;helm session里用avy跳转
 									ace-link                        ;;用avy选择link
@@ -91,16 +115,20 @@ This function should only modify configuration layer settings."
 									coffee-mode                     ;;CoffeeScript major-mode
 									drupal-mode                     ;;drupal minor-mode
 									emmet-mode                      ;;html的模板 div>ul>li*3等
-									evil-lisp-state                 ;;lisp代码的导航
-									evil-mc                         ;;evil多光标   multiple-cursors更好
+
+									golden-ratio                    ;;window黄金比例
 									helm-gitignore                  ;;自动？生成.gitignore
 									helm-themes                     ;;主题
 									highlight-numbers               ;;高亮数字？
+									auto-highlight-symbol           ;;高亮光标所在的symbol以及相同symbol
 									htmlize                         ;;将当前buffer转化为html文件
-									impatient-mode                  ;;实时显示静态web页面
-
+									web-beautify                    ;;html css js格式化 需要node.js
+									google-translate                ;;google翻译
+									request                         ;;http函数库?
 									indent-guide                    ;;在左侧加一条对齐竖线
 									linum-relative                  ;;
+									fuzzy                           ;;模糊匹配
+									elisp-slime-nav                 ;;elisp代码导航
 
 									js-doc                          ;;给js加注释
 									js2-refactor                    ;;js重构
@@ -111,24 +139,48 @@ This function should only modify configuration layer settings."
 									magit-gitflow                   ;;gitflow扩展
 									neotree                         ;;文件树  treemacs更好
 									parent-mode                     ;;找mode的parent mode？
+									auto-compile                    ;;自动编译执行lisp？
+									counsel-projectile              ;;Ivy UI for Projectile
+									adaptive-wrap                   ;;长文本换行
+									company-statistics              ;;动态改变company的顺序 关闭emacs失效
 
 
 									;;############################  作用不明或被依赖
-									;;multi-term                    ;;管理多个terminal？
+									eval-sexp-fu                    ;;求值
+									ivy-purpose
+									hl-todo
+									unfill
+
 									;;ace-window                    ;;选择window  被treemacs依赖
 									;;alert                         ;;被org-pomodoro依赖
 									;;diminish                      ;;modeline隐藏某minor-mode   被依赖
-
+									;;eyebrowse                     ;;貌似被workspace依赖
+									;;multi-term                    ;;管理多个terminal？
 
 
 									;;############################  保留
+									;;auto-yasnippet                ;;临时模板
+									;;bind-map                      ;;在不同的地方给快捷键不同的功能
 									;;clean-aindent-mode            ;;回车newline-and-indent 无内容则删除indent
+									;;company-php
+									;;company-tern
+									;;company-web
+									;;dumb-jump                     ;;跳转到定义
+									;;editorconfig                  ;;配置emacs
+									;;esh-help                      ;;eshell增强
+									;;eshell-prompt-extras          ;;eshell增强
+									;;eshell-z                      ;;eshell增强
+									;;evil-search-highlight-persist ;;search后保持高亮
+									;;evil-lion                     ;;纵向对齐
+									;;expand-region                 ;;扩大region
+									;;info+                         ;;emacs info增强
 									;;move-text                     ;;上下移动文本
 									;;multiple-cursors              ;;多光标
 									;;mwim                          ;;C-a C-e
 									;;org-pomodoro                  ;;org番茄
+									;;rainbow-delimiters            ;;不同的括号用不同的颜色
 									;;spaceline                     ;;定制mode-line
-
+									;;volatile-highlights           ;;高亮某些操作的变化 如undo redo yank等
 									)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -474,7 +526,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (wgrep smex ivy-purpose ivy-hydra counsel-projectile counsel swiper ivy youdao-dictionary xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill treemacs-projectile toc-org tagedit symon symbol-overlay string-inflection spaceline smeargle smartparens shell-pop restart-emacs request rainbow-delimiters pt popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el password-generator parinfer paradox orgit org-projectile org-present org-pomodoro org-download org-bullets org-brain open-junk-file mwim multi-term move-text macrostep js2-mode info+ hungry-delete hl-todo highlight-parentheses highlight-indentation hide-comnt help-fns+ helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump diminish define-word company-web company-tern company-statistics company-php column-enforce-mode clean-aindent-mode bind-map auto-yasnippet auto-highlight-symbol auto-compile adaptive-wrap))))
+    (helm-swoop helm-purpose helm-projectile helm-mode-manager helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag youdao-dictionary xterm-color ws-butler winum which-key wgrep web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill treemacs-projectile toc-org tagedit symon symbol-overlay string-inflection spaceline smex smeargle smartparens shell-pop restart-emacs request rainbow-delimiters pt popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el password-generator parinfer paradox orgit org-projectile org-present org-pomodoro org-download org-bullets org-brain open-junk-file mwim multi-term move-text macrostep js2-mode ivy-purpose ivy-hydra info+ hungry-delete hl-todo highlight-parentheses highlight-indentation hide-comnt help-fns+ helm-make google-translate golden-ratio gnuplot git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump diminish define-word counsel-projectile company-web company-tern company-statistics company-php column-enforce-mode clean-aindent-mode bind-map auto-yasnippet auto-highlight-symbol auto-compile adaptive-wrap))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
