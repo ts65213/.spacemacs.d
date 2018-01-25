@@ -9,6 +9,9 @@
 
 (global-hungry-delete-mode t)                          ;;一次性删除连续的空格
 
+(show-smartparens-mode nil)                            ;;不显示配对的括号
+(show-smartparens-global-mode nil)                     ;;不显示配对的括号
+
 ;;(setq-default cursor-type 'bar)			           ;;设置光标为竖线
 (setq evil-emacs-state-cursor '("green" bar))
 

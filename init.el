@@ -44,7 +44,7 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
-	 treemacs
+	 ;;treemacs
      org
      (shell :variables
 			shell-default-height 30
@@ -99,12 +99,22 @@ This function should only modify configuration layer settings."
 									evil-exchange                   ;;
 									evil-iedit-state                ;;iedit的evil模式
 									evil-org                        ;;org的evil模式
+									evil-tutor                      ;;evil
+									evil-unimpaired                 ;;
+									evil-visual-mark-mode           ;;
+									evil-visualstar                 ;;
 
 
+									git-link                        ;;打开对应的github或gitlab页面
+									git-messenger                   ;;显示当前位置代码对应的git commit的message
+									git-timemachine                 ;;显示当前文件最后一次commit的时间、作者等
 
+									flycheck-pos-tip                ;;flycheck在出错处显示错误
 									tagedit                         ;;heml标签的增强
 									ws-butler                       ;;去掉行尾的空白符
 									column-enforce-mode             ;;每行不超过80列
+									fill-column-indicator           ;;每行不超过80列
+									flx-ido                         ;;ido增强
 									define-word                     ;;翻译
 									fancy-battery                   ;;显示电池状态
 									ac-ispell                       ;;auto-complete的拼写提示
@@ -115,6 +125,8 @@ This function should only modify configuration layer settings."
 									coffee-mode                     ;;CoffeeScript major-mode
 									drupal-mode                     ;;drupal minor-mode
 									emmet-mode                      ;;html的模板 div>ul>li*3等
+									gnuplot                         ;;绘图工具
+
 
 									golden-ratio                    ;;window黄金比例
 									helm-gitignore                  ;;自动？生成.gitignore
@@ -129,6 +141,9 @@ This function should only modify configuration layer settings."
 									linum-relative                  ;;
 									fuzzy                           ;;模糊匹配
 									elisp-slime-nav                 ;;elisp代码导航
+									highlight-indentation           ;;纵向缩进线?
+									open-junk-file                  ;;打开临时文件用来试验代码
+									orgit                           ;;org里指向magit buffer的链接格式
 
 									js-doc                          ;;给js加注释
 									js2-refactor                    ;;js重构
@@ -143,13 +158,24 @@ This function should only modify configuration layer settings."
 									counsel-projectile              ;;Ivy UI for Projectile
 									adaptive-wrap                   ;;长文本换行
 									company-statistics              ;;动态改变company的顺序 关闭emacs失效
+									macrostep                       ;;看宏每一步的执行内容
+									paradox                         ;;package列表 显示五星评价
+									password-generator              ;;生成密码
+									phpcbf                          ;;使用phpcbf规范来格式化php代码
+									phpunit                         ;;php单元测试
+									restart-emacs                   ;;重启emacs
+									smeargle                        ;;高亮git里上次改动的region
+									string-inflection               ;;驼峰命名等命名方式的转换
 
-
-									;;############################  作用不明或被依赖
+									;;############################  作用不明
 									eval-sexp-fu                    ;;求值
-									ivy-purpose
+									pcre2el                         ;;转换正则表达式的语法
+									shell-pop                       ;;shell增强
 									hl-todo
+									help-fns+
+									ivy-purpose
 									unfill
+
 
 									;;ace-window                    ;;选择window  被treemacs依赖
 									;;alert                         ;;被org-pomodoro依赖
@@ -170,16 +196,31 @@ This function should only modify configuration layer settings."
 									;;esh-help                      ;;eshell增强
 									;;eshell-prompt-extras          ;;eshell增强
 									;;eshell-z                      ;;eshell增强
-									;;evil-search-highlight-persist ;;search后保持高亮
 									;;evil-lion                     ;;纵向对齐
+									;;evil-search-highlight-persist ;;search后保持高亮
 									;;expand-region                 ;;扩大region
+									;;ggtags                        ;;tags
+									;;helm-ag                       ;;搜索
+									;;hide-comnt                    ;;隐藏/显示注释
+									;;highlight-parentheses         ;;高亮包裹的括号
+									;;hungry-delete                 ;;删除连续的空白符
 									;;info+                         ;;emacs info增强
+									;;js2-mode                      ;;javascript增强mode
 									;;move-text                     ;;上下移动文本
 									;;multiple-cursors              ;;多光标
 									;;mwim                          ;;C-a C-e
 									;;org-pomodoro                  ;;org番茄
+									;;parinfer                      ;;lisp编辑
+									;;persp-mode                    ;;layout
+									;;php-auto-yasnippets           ;;php内置函数的yas模板
+									;;php-extras                    ;;php-mode增强
+									;;popwin                        ;;管理弹出window
+									;;pt                            ;;搜索
 									;;rainbow-delimiters            ;;不同的括号用不同的颜色
 									;;spaceline                     ;;定制mode-line
+									;;smartparens                   ;;括号
+									;;spaceline                     ;;powerline的配置
+									;;symbol-overlay                ;;高亮相同的symbol
 									;;volatile-highlights           ;;高亮某些操作的变化 如undo redo yank等
 									)
    ;; Defines the behaviour of Spacemacs when installing packages.
@@ -474,10 +515,13 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
 
 
-  (setq configuration-layer-elpa-archives
-		'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
-		  ("org-cn"   . "http://elpa.emacs-china.org/org/")
-		  ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+  ;;(setq configuration-layer-elpa-archives
+	;;	'(("stable-elpa"   . "https://github.com/syl20bnr/spacelpa")))
+
+   (setq configuration-layer-elpa-archives
+   		'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+   		  ("org-cn"   . "http://elpa.emacs-china.org/org/")
+   		  ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
 
   ;;------------------------------------------------------------------------------------------------加快启动速度
   (setq tramp-ssh-controlmaster-options
@@ -526,7 +570,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-swoop helm-purpose helm-projectile helm-mode-manager helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag youdao-dictionary xterm-color ws-butler winum which-key wgrep web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill treemacs-projectile toc-org tagedit symon symbol-overlay string-inflection spaceline smex smeargle smartparens shell-pop restart-emacs request rainbow-delimiters pt popwin phpunit phpcbf php-extras php-auto-yasnippets persp-mode pcre2el password-generator parinfer paradox orgit org-projectile org-present org-pomodoro org-download org-bullets org-brain open-junk-file mwim multi-term move-text macrostep js2-mode ivy-purpose ivy-hydra info+ hungry-delete hl-todo highlight-parentheses highlight-indentation hide-comnt help-fns+ helm-make google-translate golden-ratio gnuplot git-timemachine git-messenger git-link ggtags fuzzy flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump diminish define-word counsel-projectile company-web company-tern company-statistics company-php column-enforce-mode clean-aindent-mode bind-map auto-yasnippet auto-highlight-symbol auto-compile adaptive-wrap))))
+    (treemacs-projectile treemacs pfuture youdao-dictionary xterm-color winum which-key web-mode volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon symbol-overlay spaceline smartparens rainbow-delimiters pt popwin php-extras php-auto-yasnippets persp-mode parinfer org-projectile org-present org-pomodoro org-download org-bullets org-brain mwim multi-term move-text magit js2-mode info+ hydra hungry-delete highlight-parentheses hide-comnt helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag ggtags flycheck eyebrowse expand-region evil-search-highlight-persist evil-lion eshell-z eshell-prompt-extras esh-help editorconfig dumb-jump diminish company-web company-tern company-php clean-aindent-mode bind-map auto-yasnippet ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
