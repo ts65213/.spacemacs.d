@@ -104,6 +104,16 @@ This function should only modify configuration layer settings."
 									evil-visual-mark-mode           ;;
 									evil-visualstar                 ;;
 
+									org-brain                       ;;org转为思维导图形式
+									org-projectile                  ;;org创建和project关联的TODO
+
+									helm-c-yasnippet                ;;helm显示yasnippet的模板
+									helm-company                    ;;helm显示company的候选项
+									helm-css-scss                   ;;helm显示css文件里已存在的选择器
+									helm-descbinds                  ;;helm显示已绑定的快捷键和命令
+									helm-flx                        ;;helm候选项排序
+									helm-make                       ;;build file
+									helm-mode-manager               ;;helm管理major和minor mode
 
 									git-link                        ;;打开对应的github或gitlab页面
 									git-messenger                   ;;显示当前位置代码对应的git commit的message
@@ -166,11 +176,16 @@ This function should only modify configuration layer settings."
 									restart-emacs                   ;;重启emacs
 									smeargle                        ;;高亮git里上次改动的region
 									string-inflection               ;;驼峰命名等命名方式的转换
+									symon                           ;;显示cpu memory 网速等信息
+									uuidgen                         ;;生成uuid 分布式系统元素的唯一识别码
+									xterm-color                     ;;256色
 
 									;;############################  作用不明
 									eval-sexp-fu                    ;;求值
 									pcre2el                         ;;转换正则表达式的语法
 									shell-pop                       ;;shell增强
+									org-present
+									toc-org
 									hl-todo
 									help-fns+
 									ivy-purpose
@@ -181,6 +196,8 @@ This function should only modify configuration layer settings."
 									;;alert                         ;;被org-pomodoro依赖
 									;;diminish                      ;;modeline隐藏某minor-mode   被依赖
 									;;eyebrowse                     ;;貌似被workspace依赖
+									;;helm-c-yasnippet              ;;
+									;;helm-purpose                  ;;
 									;;multi-term                    ;;管理多个terminal？
 
 
@@ -201,6 +218,8 @@ This function should only modify configuration layer settings."
 									;;expand-region                 ;;扩大region
 									;;ggtags                        ;;tags
 									;;helm-ag                       ;;搜索
+									;;helm-projectile               ;;项目里搜索文件
+									;;helm-swoop                    ;;搜索文本
 									;;hide-comnt                    ;;隐藏/显示注释
 									;;highlight-parentheses         ;;高亮包裹的括号
 									;;hungry-delete                 ;;删除连续的空白符
@@ -209,6 +228,8 @@ This function should only modify configuration layer settings."
 									;;move-text                     ;;上下移动文本
 									;;multiple-cursors              ;;多光标
 									;;mwim                          ;;C-a C-e
+									;;org-bullets                   ;;改变org标题样式
+									;;org-download                  ;;拖动图片
 									;;org-pomodoro                  ;;org番茄
 									;;parinfer                      ;;lisp编辑
 									;;persp-mode                    ;;layout
@@ -221,7 +242,13 @@ This function should only modify configuration layer settings."
 									;;smartparens                   ;;括号
 									;;spaceline                     ;;powerline的配置
 									;;symbol-overlay                ;;高亮相同的symbol
+									;;use-package                   ;;包管理
+									;;vi-tilde-fringe               ;;在超出文件的行首显示~
 									;;volatile-highlights           ;;高亮某些操作的变化 如undo redo yank等
+									;;web-mode                      ;;web-mode
+									;;which-key                     ;;列出可用的快捷键
+									;;winum                         ;;给window编号
+									;;youdao-dictionary             ;;有道词典
 									)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
