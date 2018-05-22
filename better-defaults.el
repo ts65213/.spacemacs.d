@@ -4,7 +4,13 @@
 
 (mouse-avoidance-mode 'animate)                        ;;光标靠近鼠标时 把鼠标移走
 
-(set-default-font "17")					               ;;字体大小
+;;(set-default-font "17")					               ;;字体大小
+
+(dolist (charset '(kana han symbol cjk-misc bopomofo))  ;;中文字体
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset (font-spec :family "华文楷体" :size 24)))
+
+
 (delete-selection-mode t)                              ;;选中后输入，直接替换选中的内容
 
 (global-hungry-delete-mode t)                          ;;一次性删除连续的空格
