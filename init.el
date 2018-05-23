@@ -48,13 +48,16 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
-	   treemacs
      org
-     (shell :variables
-			shell-default-height 30
-			shell-default-position 'bottom)
+		 gtags
      syntax-checking
+	   ;; treemacs
      ;; version-control
+     (shell :variables
+						shell-default-height 30
+						shell-default-position 'bottom)
+
+
      )
 
    ;; List of additional packages that will be installed without being
@@ -715,7 +718,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(treemacs-projectile treemacs ht pfuture youdao-dictionary names chinese-word-at-point pos-tip yasnippet-snippets winum web-mode volatile-highlights vi-tilde-fringe symbol-overlay spaceline-all-the-icons all-the-icons memoize spaceline powerline rainbow-delimiters pt popwin php-extras php-auto-yasnippets persp-mode parinfer overseer org-pomodoro alert log4e gntp org-mime org-download org-bullets nameless mwim multi-term move-text magit magit-popup ghub json-reformat json-navigator hierarchy js2-mode hungry-delete highlight-parentheses helm-xref helm-swoop helm-purpose window-purpose imenu-list helm-projectile projectile helm-ag helm helm-core git-commit with-editor ggtags flycheck pkg-info epl eyebrowse expand-region evil-search-highlight-persist highlight evil-lion evil-cleverparens smartparens paredit eshell-z eshell-prompt-extras esh-help editorconfig dumb-jump company-web web-completion-data company-tern dash-functional tern company-php ac-php-core popup f xcscope php-mode dash s company clean-aindent-mode centered-cursor-mode auto-yasnippet yasnippet ace-window avy which-key use-package org-plus-contrib hydra font-lock+ evil diminish bind-map bind-key async)))
+   (quote
+    (youdao-dictionary names chinese-word-at-point pos-tip yasnippet-snippets winum web-mode volatile-highlights vi-tilde-fringe symbol-overlay spaceline-all-the-icons all-the-icons memoize spaceline powerline rainbow-delimiters pt popwin php-extras php-auto-yasnippets persp-mode parinfer overseer org-pomodoro alert log4e gntp org-mime org-download org-bullets nameless mwim multi-term move-text magit magit-popup ghub let-alist json-reformat json-navigator hierarchy js2-mode hungry-delete highlight-parentheses helm-xref helm-swoop helm-purpose window-purpose imenu-list helm-projectile projectile helm-gtags helm-ag helm helm-core git-commit with-editor ggtags flycheck pkg-info epl eyebrowse expand-region evil-search-highlight-persist highlight evil-lion evil-cleverparens smartparens paredit eshell-z eshell-prompt-extras esh-help editorconfig dumb-jump company-web web-completion-data company-tern dash-functional tern company-php ac-php-core popup f xcscope php-mode dash s company clean-aindent-mode centered-cursor-mode auto-yasnippet yasnippet ace-window avy which-key use-package org-plus-contrib hydra font-lock+ evil goto-chg undo-tree diminish bind-map bind-key async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
