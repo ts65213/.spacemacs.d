@@ -42,6 +42,7 @@ This function should only modify configuration layer settings."
 		 javascript
      html
      php
+		 python
      helm
 		 ;; ivy
      auto-completion
@@ -49,9 +50,10 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      org
-		 gtags
+		 ;;lsp
+		 ;; gtags
      syntax-checking
-	   ;; treemacs
+	   treemacs
      ;; version-control
      (shell :variables
 						shell-default-height 30
@@ -69,200 +71,205 @@ This function should only modify configuration layer settings."
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
                                       symbol-overlay
-									  ggtags
-									  parinfer
-									  youdao-dictionary
-									  pt
-									  )
+																			youdao-dictionary
+																			;; ggtags
+																			;; parinfer
+																			;; pt
+																			)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '(
-									;;############################  一定不会用到
-									pug-mode                        ;;pug  major-mode
-									sass-mode                       ;;sass major-mode
-									scss-mode                       ;;scss major-mode
-									haml-mode                       ;;haml major-mode  html模板
-									json-mode                       ;;json major-mode
-									less-css-mode                   ;;less major-mode
-									slim-mode                       ;;slim major-mode
-									gitattributes-mode              ;;.gitattributes文件 major-mode
-									gitconfig-mode                  ;;.gitconfig文件 major-mode
-									gitignore-mode                  ;;.gitignore文件 major-mode
+																		;;############################  一定不会用到
+																		pug-mode                        ;;pug  major-mode
+																		sass-mode                       ;;sass major-mode
+																		scss-mode                       ;;scss major-mode
+																		haml-mode                       ;;haml major-mode  html模板
+																		json-mode                       ;;json major-mode
+																		less-css-mode                   ;;less major-mode
+																		slim-mode                       ;;slim major-mode
+																		gitattributes-mode              ;;.gitattributes文件 major-mode
+																		gitconfig-mode                  ;;.gitconfig文件 major-mode
+																		gitignore-mode                  ;;.gitignore文件 major-mode
 
-									simple-httpd                    ;;web服务器
-									livid-mode                      ;;实时显示静态web页面
-									skewer-mode                     ;;实时显示静态web页面 js求值
-									impatient-mode                  ;;实时显示静态web页面
+																		simple-httpd                    ;;web服务器
+																		livid-mode                      ;;实时显示静态web页面
+																		skewer-mode                     ;;实时显示静态web页面 js求值
+																		impatient-mode                  ;;实时显示静态web页面
 
-									evil-anzu                       ;;搜索或替换时 提示一些信息
-									evil-args                       ;;evil
-									evil-ediff                      ;;增加ediff的vi操作模式
-									evil-escape                     ;;evil 退出编辑或其他状态
-									evil-indent-plus                ;;evil
-									evil-lisp-state                 ;;lisp代码的导航
-									evil-magit                      ;;evil magit
-									evil-matchit                    ;;evil 在配对的东西之间跳转 如<div></div>
-									evil-mc                         ;;多光标   multiple-cursors更好
-									evil-numbers                    ;;增加或减少region里的数字
-									evil-nerd-commenter             ;;注释多行
-									evil-surround                   ;;evil  修改光标外层的引号、括号等
-									evil-exchange                   ;;
-									evil-iedit-state                ;;iedit的evil模式
-									evil-org                        ;;org的evil模式
-									evil-tutor                      ;;evil
-									evil-unimpaired                 ;;
-									evil-visual-mark-mode           ;;
-									evil-visualstar                 ;;
+																		evil-anzu                       ;;搜索或替换时 提示一些信息
+																		evil-args                       ;;evil
+																		evil-ediff                      ;;增加ediff的vi操作模式
+																		evil-escape                     ;;evil 退出编辑或其他状态
+																		evil-indent-plus                ;;evil
+																		evil-lisp-state                 ;;lisp代码的导航
+																		evil-magit                      ;;evil magit
+																		evil-matchit                    ;;evil 在配对的东西之间跳转 如<div></div>
+																		evil-mc                         ;;多光标   multiple-cursors更好
+																		evil-numbers                    ;;增加或减少region里的数字
+																		evil-nerd-commenter             ;;注释多行
+																		evil-surround                   ;;evil  修改光标外层的引号、括号等
+																		evil-exchange                   ;;
+																		evil-iedit-state                ;;iedit的evil模式
+																		evil-org                        ;;org的evil模式
+																		evil-tutor                      ;;evil
+																		evil-unimpaired                 ;;
+																		evil-visual-mark-mode           ;;
+																		evil-visualstar                 ;;
 
-									org-brain                       ;;org转为思维导图形式
-									org-projectile                  ;;org创建和project关联的TODO
-									orgit                           ;;org里指向magit buffer的链接格式
+																		org-brain                       ;;org转为思维导图形式
+																		org-projectile                  ;;org创建和project关联的TODO
+																		orgit                           ;;org里指向magit buffer的链接格式
 
-									helm-c-yasnippet                ;;helm显示yasnippet的模板
-									helm-company                    ;;helm显示company的候选项
-									helm-css-scss                   ;;helm显示css文件里已存在的选择器
-									helm-descbinds                  ;;helm显示已绑定的快捷键和命令
-									helm-flx                        ;;helm候选项排序
-									helm-gitignore                  ;;自动？生成.gitignore
-									helm-make                       ;;build file
-									helm-mode-manager               ;;helm管理major和minor mode
-									helm-themes                     ;;主题
+																		helm-c-yasnippet                ;;helm显示yasnippet的模板
+																		helm-company                    ;;helm显示company的候选项
+																		helm-css-scss                   ;;helm显示css文件里已存在的选择器
+																		helm-descbinds                  ;;helm显示已绑定的快捷键和命令
+																		helm-flx                        ;;helm候选项排序
+																		helm-gitignore                  ;;自动？生成.gitignore
+																		helm-make                       ;;build file
+																		helm-mode-manager               ;;helm管理major和minor mode
+																		helm-themes                     ;;主题
 
-									git-link                        ;;打开对应的github或gitlab页面
-									git-messenger                   ;;显示当前位置代码对应的git commit的message
-									git-timemachine                 ;;显示当前文件最后一次commit的时间、作者等
+																		git-link                        ;;打开对应的github或gitlab页面
+																		git-messenger                   ;;显示当前位置代码对应的git commit的message
+																		git-timemachine                 ;;显示当前文件最后一次commit的时间、作者等
 
-									flycheck-pos-tip                ;;flycheck在出错处显示错误
-									tagedit                         ;;heml标签的增强
-									ws-butler                       ;;去掉行尾的空白符
-									column-enforce-mode             ;;每行不超过80列
-									fill-column-indicator           ;;每行不超过80列
-									flx-ido                         ;;ido增强
-									define-word                     ;;翻译
-									fancy-battery                   ;;显示电池状态
-									ac-ispell                       ;;auto-complete的拼写提示
-									ace-jump-helm-line              ;;helm session里用avy跳转
-									ace-link                        ;;用avy选择link
-									aggressive-indent               ;;控制缩进  C-M-\即可
-									auto-complete                   ;;自动补全  company更好
-									coffee-mode                     ;;CoffeeScript major-mode
-									drupal-mode                     ;;drupal minor-mode
-									emmet-mode                      ;;html的模板 div>ul>li*3等
-									gnuplot                         ;;绘图工具
-
-
-									golden-ratio                    ;;window黄金比例
-									highlight-numbers               ;;高亮数字？
-									auto-highlight-symbol           ;;高亮光标所在的symbol以及相同symbol
-									htmlize                         ;;将当前buffer转化为html文件
-									web-beautify                    ;;html css js格式化 需要node.js
-									google-translate                ;;google翻译
-									request                         ;;http函数库?
-									indent-guide                    ;;在左侧加一条对齐竖线
-									linum-relative                  ;;
-									fuzzy                           ;;模糊匹配
-									elisp-slime-nav                 ;;elisp代码导航
-									highlight-indentation           ;;纵向缩进线?
-									open-junk-file                  ;;打开临时文件用来试验代码
-
-									js-doc                          ;;给js加注释
-									js2-refactor                    ;;js重构
-									json-snatcher                   ;;json里的path
-									link-hint                       ;;avy打开链接
-									log4e                           ;;elisp打日志
-									lorem-ipsum                     ;;插入文章，看排版、字体效果
-									magit-gitflow                   ;;gitflow扩展
-									neotree                         ;;文件树  treemacs更好
-									parent-mode                     ;;找mode的parent mode？
-									auto-compile                    ;;自动编译执行lisp？
-									counsel-projectile              ;;Ivy UI for Projectile
-									adaptive-wrap                   ;;长文本换行
-									company-statistics              ;;动态改变company的顺序 关闭emacs失效
-									macrostep                       ;;看宏每一步的执行内容
-									paradox                         ;;package列表 显示五星评价
-									password-generator              ;;生成密码
-									phpcbf                          ;;使用phpcbf规范来格式化php代码
-									phpunit                         ;;php单元测试
-									restart-emacs                   ;;重启emacs
-									smeargle                        ;;高亮git里上次改动的region
-									string-inflection               ;;驼峰命名等命名方式的转换
-									symon                           ;;显示cpu memory 网速等信息
-									uuidgen                         ;;生成uuid 分布式系统元素的唯一识别码
-									xterm-color                     ;;256色
-
-									;;############################  作用不明
-									eval-sexp-fu                    ;;求值
-									pcre2el                         ;;转换正则表达式的语法
-									shell-pop                       ;;shell增强
-									org-present
-									toc-org
-									hl-todo
-									help-fns+
-									ivy-purpose
-									unfill
+																		flycheck-pos-tip                ;;flycheck在出错处显示错误
+																		tagedit                         ;;heml标签的增强
+																		ws-butler                       ;;去掉行尾的空白符
+																		column-enforce-mode             ;;每行不超过80列
+																		fill-column-indicator           ;;每行不超过80列
+																		flx-ido                         ;;ido增强
+																		define-word                     ;;翻译
+																		fancy-battery                   ;;显示电池状态
+																		ac-ispell                       ;;auto-complete的拼写提示
+																		ace-jump-helm-line              ;;helm session里用avy跳转
+																		ace-link                        ;;用avy选择link
+																		aggressive-indent               ;;控制缩进  C-M-\即可
+																		auto-complete                   ;;自动补全  company更好
+																		coffee-mode                     ;;CoffeeScript major-mode
+																		drupal-mode                     ;;drupal minor-mode
+																		emmet-mode                      ;;html的模板 div>ul>li*3等
+																		gnuplot                         ;;绘图工具
 
 
-									;;ace-window                    ;;选择window  被treemacs依赖
-									;;alert                         ;;被org-pomodoro依赖
-									;;diminish                      ;;modeline隐藏某minor-mode   被依赖
-									;;eyebrowse                     ;;貌似被workspace依赖
-									;;helm-c-yasnippet              ;;
-									;;helm-purpose                  ;;
-									;;multi-term                    ;;管理多个terminal？
+																		golden-ratio                    ;;window黄金比例
+																		highlight-numbers               ;;高亮数字？
+																		auto-highlight-symbol           ;;高亮光标所在的symbol以及相同symbol
+																		htmlize                         ;;将当前buffer转化为html文件
+																		web-beautify                    ;;html css js格式化 需要node.js
+																		google-translate                ;;google翻译
+																		request                         ;;http函数库?
+																		indent-guide                    ;;在左侧加一条对齐竖线
+																		linum-relative                  ;;
+																		fuzzy                           ;;模糊匹配
+																		elisp-slime-nav                 ;;elisp代码导航
+																		highlight-indentation           ;;纵向缩进线?
+																		open-junk-file                  ;;打开临时文件用来试验代码
+
+																		js-doc                          ;;给js加注释
+																		js2-refactor                    ;;js重构
+																		json-snatcher                   ;;json里的path
+																		link-hint                       ;;avy打开链接
+																		log4e                           ;;elisp打日志
+																		lorem-ipsum                     ;;插入文章，看排版、字体效果
+																		magit-gitflow                   ;;gitflow扩展
+																		neotree                         ;;文件树  treemacs更好
+																		parent-mode                     ;;找mode的parent mode？
+																		auto-compile                    ;;自动编译执行lisp？
+																		counsel-projectile              ;;Ivy UI for Projectile
+																		adaptive-wrap                   ;;长文本换行
+																		company-statistics              ;;动态改变company的顺序 关闭emacs失效
+																		macrostep                       ;;看宏每一步的执行内容
+																		paradox                         ;;package列表 显示五星评价
+																		password-generator              ;;生成密码
+																		phpcbf                          ;;使用phpcbf规范来格式化php代码
+																		phpunit                         ;;php单元测试
+																		restart-emacs                   ;;重启emacs
+																		smeargle                        ;;高亮git里上次改动的region
+																		string-inflection               ;;驼峰命名等命名方式的转换
+																		symon                           ;;显示cpu memory 网速等信息
+																		uuidgen                         ;;生成uuid 分布式系统元素的唯一识别码
+																		xterm-color                     ;;256色
+
+																		;;############################  作用不明
+																		eval-sexp-fu                    ;;求值
+																		pcre2el                         ;;转换正则表达式的语法
+																		shell-pop                       ;;shell增强
+																		org-present
+																		toc-org
+																		hl-todo
+																		help-fns+
+																		ivy-purpose
+																		unfill
 
 
-									;;############################  保留
-									;;auto-yasnippet                ;;临时模板
-									;;bind-map                      ;;在不同的地方给快捷键不同的功能
-									;;clean-aindent-mode            ;;回车newline-and-indent 无内容则删除indent
-									;;company-php
-									;;company-tern
-									;;company-web
-									;;dumb-jump                     ;;跳转到定义
-									;;editorconfig                  ;;配置emacs
-									;;esh-help                      ;;eshell增强
-									;;eshell-prompt-extras          ;;eshell增强
-									;;eshell-z                      ;;eshell增强
-									;;evil-lion                     ;;纵向对齐
-									;;evil-search-highlight-persist ;;search后保持高亮
-									;;expand-region                 ;;扩大region
-									;;ggtags                        ;;tags
-									;;helm-ag                       ;;搜索
-									;;helm-projectile               ;;项目里搜索文件
-									;;helm-swoop                    ;;搜索文本
-									;;hide-comnt                    ;;隐藏/显示注释
-									;;highlight-parentheses         ;;高亮包裹的括号
-									;;hungry-delete                 ;;删除连续的空白符
-									;;info+                         ;;emacs info增强
-									;;js2-mode                      ;;javascript增强mode
-									;;move-text                     ;;上下移动文本
-									;;multiple-cursors              ;;多光标
-									;;mwim                          ;;C-a C-e
-									;;org-bullets                   ;;改变org标题样式
-									;;org-download                  ;;拖动图片
-									;;org-pomodoro                  ;;org番茄
-									;;parinfer                      ;;lisp编辑
-									;;persp-mode                    ;;layout
-									;;php-auto-yasnippets           ;;php内置函数的yas模板
-									;;php-extras                    ;;php-mode增强
-									;;popwin                        ;;管理弹出window
-									;;pt                            ;;搜索
-									;;rainbow-delimiters            ;;不同的括号用不同的颜色
-									;;spaceline                     ;;定制mode-line
-									;;smartparens                   ;;括号
-									;;spaceline                     ;;powerline的配置
-									;;symbol-overlay                ;;高亮相同的symbol
-									;;use-package                   ;;包管理
-									;;vi-tilde-fringe               ;;在超出文件的行首显示~
-									;;volatile-highlights           ;;高亮某些操作的变化 如undo redo yank等
-									;;web-mode                      ;;web-mode
-									;;which-key                     ;;列出可用的快捷键
-									;;winum                         ;;给window编号
-									;;youdao-dictionary             ;;有道词典
-									)
+																		;;ace-window                    ;;选择window  被treemacs依赖
+																		;;alert                         ;;被org-pomodoro依赖
+																		;;diminish                      ;;modeline隐藏某minor-mode   被依赖
+																		;;eyebrowse                     ;;貌似被workspace依赖
+																		;;helm-c-yasnippet              ;;
+																		;;helm-purpose                  ;;
+																		;;multi-term                    ;;管理多个terminal？
+
+
+																		;;############################  有error   暂时去掉
+																		php-extras
+																		font-lock+
+																		lsp-javascript-typescript
+
+																		;;############################  保留
+																		;;auto-yasnippet                ;;临时模板
+																		;;bind-map                      ;;在不同的地方给快捷键不同的功能
+																		;;clean-aindent-mode            ;;回车newline-and-indent 无内容则删除indent
+																		;;company-php
+																		;;company-tern
+																		;;company-web
+																		;;dumb-jump                     ;;跳转到定义
+																		;;editorconfig                  ;;配置emacs
+																		;;esh-help                      ;;eshell增强
+																		;;eshell-prompt-extras          ;;eshell增强
+																		;;eshell-z                      ;;eshell增强
+																		;;evil-lion                     ;;纵向对齐
+																		;;evil-search-highlight-persist ;;search后保持高亮
+																		;;expand-region                 ;;扩大region
+																		;;ggtags                        ;;tags
+																		;;helm-ag                       ;;搜索
+																		;;helm-projectile               ;;项目里搜索文件
+																		;;helm-swoop                    ;;搜索文本
+																		;;hide-comnt                    ;;隐藏/显示注释
+																		;;highlight-parentheses         ;;高亮包裹的括号
+																		;;hungry-delete                 ;;删除连续的空白符
+																		;;info+                         ;;emacs info增强
+																		;;js2-mode                      ;;javascript增强mode
+																		;;move-text                     ;;上下移动文本
+																		;;multiple-cursors              ;;多光标
+																		;;mwim                          ;;C-a C-e
+																		;;org-bullets                   ;;改变org标题样式
+																		;;org-download                  ;;拖动图片
+																		;;org-pomodoro                  ;;org番茄
+																		;;parinfer                      ;;lisp编辑
+																		;;persp-mode                    ;;layout
+																		;;php-auto-yasnippets           ;;php内置函数的yas模板
+																		;;php-extras                    ;;php-mode增强
+																		;;popwin                        ;;管理弹出window
+																		;;pt                            ;;搜索
+																		;;rainbow-delimiters            ;;不同的括号用不同的颜色
+																		;;spaceline                     ;;定制mode-line
+																		;;smartparens                   ;;括号
+																		;;spaceline                     ;;powerline的配置
+																		;;symbol-overlay                ;;高亮相同的symbol
+																		;;use-package                   ;;包管理
+																		;;vi-tilde-fringe               ;;在超出文件的行首显示~
+																		;;volatile-highlights           ;;高亮某些操作的变化 如undo redo yank等
+																		;;web-mode                      ;;web-mode
+																		;;which-key                     ;;列出可用的快捷键
+																		;;winum                         ;;给window编号
+																		;;youdao-dictionary             ;;有道词典
+																		)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -655,13 +662,13 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
 
 
-  ;;(setq configuration-layer-elpa-archives
-	;;	'(("stable-elpa"   . "https://github.com/syl20bnr/spacelpa")))
+  ;; (setq configuration-layer-elpa-archives
+	;; 	'(("stable-elpa"   . "https://github.com/syl20bnr/spacelpa")))
 
-   (setq configuration-layer-elpa-archives
-   		'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
-   		  ("org-cn"   . "http://elpa.emacs-china.org/org/")
-   		  ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+  (setq configuration-layer-elpa-archives
+   			'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+   				("org-cn"   . "http://elpa.emacs-china.org/org/")
+   				("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
 
   ;;------------------------------------------------------------------------------------------------加快启动速度
   (setq tramp-ssh-controlmaster-options
@@ -719,7 +726,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (youdao-dictionary names chinese-word-at-point pos-tip yasnippet-snippets winum web-mode volatile-highlights vi-tilde-fringe symbol-overlay spaceline-all-the-icons all-the-icons memoize spaceline powerline rainbow-delimiters pt popwin php-extras php-auto-yasnippets persp-mode parinfer overseer org-pomodoro alert log4e gntp org-mime org-download org-bullets nameless mwim multi-term move-text magit magit-popup ghub let-alist json-reformat json-navigator hierarchy js2-mode hungry-delete highlight-parentheses helm-xref helm-swoop helm-purpose window-purpose imenu-list helm-projectile projectile helm-gtags helm-ag helm helm-core git-commit with-editor ggtags flycheck pkg-info epl eyebrowse expand-region evil-search-highlight-persist highlight evil-lion evil-cleverparens smartparens paredit eshell-z eshell-prompt-extras esh-help editorconfig dumb-jump company-web web-completion-data company-tern dash-functional tern company-php ac-php-core popup f xcscope php-mode dash s company clean-aindent-mode centered-cursor-mode auto-yasnippet yasnippet ace-window avy which-key use-package org-plus-contrib hydra font-lock+ evil goto-chg undo-tree diminish bind-map bind-key async))))
+    (yapfify pyvenv pytest pyenv-mode py-isort pippel pipenv pip-requirements live-py-mode importmagic epc ctable concurrent deferred helm-pydoc cython-mode company-anaconda anaconda-mode pythonic youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -727,3 +734,17 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
