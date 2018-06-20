@@ -67,6 +67,8 @@
 
 
 (add-to-list 'exec-path "~/global/bin")           ;;添加path   没有用
+(add-to-list 'exec-path "/usr/bin")
+
 (setenv "PATH" (concat "~/global/bin;" (getenv "PATH")))
 
 
