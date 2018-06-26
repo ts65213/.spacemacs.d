@@ -51,7 +51,6 @@ This function should only modify configuration layer settings."
      git
      org
 		 lsp
-		 ;; gtags
      syntax-checking
 	   treemacs
      ;; version-control
@@ -72,9 +71,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
                                       symbol-overlay
 																			youdao-dictionary
-																			;; ggtags
 																			;; parinfer
-																			;; pt
 																			)
 
    ;; A list of packages that cannot be updated.
@@ -194,6 +191,7 @@ This function should only modify configuration layer settings."
 																		symon                           ;;显示cpu memory 网速等信息
 																		uuidgen                         ;;生成uuid 分布式系统元素的唯一识别码
 																		xterm-color                     ;;256色
+																		anaconda-mode                   ;;python backend
 
 																		;;############################  作用不明
 																		eval-sexp-fu                    ;;求值
@@ -699,14 +697,13 @@ before packages are loaded."
 
 
 
-
   (add-to-list 'load-path "~/.spacemacs.d/")
   (require 'better-defaults)    ;;默认值
   (require 'my-function)        ;;自定义函数
   (require 'key-binding)        ;;按键绑定
 
 
-	
+
 
 
   )
@@ -723,12 +720,9 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files
-	 (quote
-		("~/.spacemacs.d/todo.org" "~/test-org/agenda-2.org" "~/test-org/agenda-1.org")))
  '(package-selected-packages
-	 (quote
-		(lsp-ui markdown-mode lsp-python company-lsp lsp-mode youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
+   (quote
+    (lsp-php youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
