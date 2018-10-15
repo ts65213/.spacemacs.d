@@ -39,10 +39,7 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-		 javascript
-     html
-     php
-		 (python :variables python-backend 'lsp)
+		 go
      helm
 		 ;; ivy
      auto-completion
@@ -215,9 +212,9 @@ This function should only modify configuration layer settings."
 
 
 																		;;############################  有error   暂时去掉
-																		php-extras
 																		font-lock+
-																		lsp-javascript-typescript
+																		dired-mode
+
 
 																		;;############################  保留
 																		;;auto-yasnippet                ;;临时模板
@@ -722,7 +719,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (lsp-php youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
+    (lsp-go godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc company-go go-mode youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
