@@ -23,7 +23,7 @@
 
 (global-set-key (kbd "s-t") 'treemacs-toggle)          	                    ;;treemacs
 
-(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)          ;;dired里按回车时，不生成新的buffer
+;;(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)          ;;dired里按回车时，不生成新的buffer
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)                                   ;;ibuffer
 
@@ -44,9 +44,11 @@
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
 ;;#################################################################################################### 文本
-(global-set-key (kbd "C-M-SPC") 'set-mark-command)                          ;;mark set
+;;(global-set-key (kbd "C-M-SPC") 'set-mark-command)                          ;;mark set
+(global-set-key (kbd "C-M-<f11>") 'set-mark-command)                          ;;mark set
 
 (global-set-key (kbd "C-o") 'er/expand-region)                              ;;expand-region
+
 
 (define-key input-decode-map (kbd "C-m") (kbd "S-m"))
 (global-set-key (kbd "S-m") 'er/expand-region)                              ;;expand-region

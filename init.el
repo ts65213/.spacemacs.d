@@ -39,15 +39,16 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-		 go
+
+		 ;;go
      helm
 		 ;; ivy
-     auto-completion
+     ;;auto-completion
      better-defaults
      emacs-lisp
      git
      org
-		 lsp
+		 ;;lsp
      syntax-checking
 	   treemacs
      ;; version-control

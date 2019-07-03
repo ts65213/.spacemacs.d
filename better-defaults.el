@@ -102,10 +102,10 @@
 
 
 
-;;-------------------------------------------------------------------------------------dired
-(setq dired-recursive-deletes 'always)  ;;dired总是递归复制/删除目录
-(setq dired-recursive-copies 'always)
-(put 'dired-find-alternate-file 'disabled nil) ;;dired里按回车时，不生成新的buffer
+;;-------------------------------------------------------------------------------------dired 报错先注释掉
+;;(setq dired-recursive-deletes 'always)  ;;dired总是递归复制/删除目录
+;;(setq dired-recursive-copies 'always)
+;;(put 'dired-find-alternate-file 'disabled nil) ;;dired里按回车时，不生成新的buffer
 
 ;;-------------------------------------------------------------------------------------ibuffer
 ;;(add-to-list 'ibuffer-never-show-regexps "^\\*")
