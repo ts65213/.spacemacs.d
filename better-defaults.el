@@ -8,7 +8,7 @@
 
 (dolist (charset '(kana han symbol cjk-misc bopomofo))  ;;中文字体
   (set-fontset-font (frame-parameter nil 'font)
-                    charset (font-spec :family "华文楷体" :size 24)))
+                    charset (font-spec :family "KaiTi" :size 20)))
 
 
 (delete-selection-mode t)                              ;;选中后输入，直接替换选中的内容
