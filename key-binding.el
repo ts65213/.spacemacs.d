@@ -9,7 +9,6 @@
 (setq w32-apps-modifier 'hyper)                                             ;; H 键
 
 ;;#################################################################################################### 杂项
-(global-set-key [f10] 'loop-alpha)                                          ;;切换透明度
 (global-set-key [f12] 'help-command)                                        ;;帮助
 (global-set-key (kbd "C-x g") 'magit-status)                                ;;Magit
 (global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point)           ;;youdao-dictionary

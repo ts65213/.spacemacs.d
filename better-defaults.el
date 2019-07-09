@@ -10,7 +10,6 @@
   (set-fontset-font (frame-parameter nil 'font)
                     charset (font-spec :family "KaiTi" :size 20)))
 
-
 (delete-selection-mode t)                              ;;选中后输入，直接替换选中的内容
 
 (global-hungry-delete-mode t)                          ;;一次性删除连续的空格
@@ -56,11 +55,7 @@
 (add-hook 'c++-mode-hook 'my-cc-style)
 
 
-
-
 (setq explicit-shell-file-name "/bin/bash")     ;;远程打开shell
-
-
 
 
 ;;(setq projectile-indexing-method 'native)            ;;生成一个project
@@ -72,34 +67,13 @@
 (setenv "PATH" (concat "~/global/bin;" (getenv "PATH")))
 
 
-
-
-
-
-
-
-
-
 ;;(add-to-list 'tramp-remote-path "/plink:0:/usr/local/sbin:/plink:0:/usr/local/bin:/plink:0:/usr/sbin:/plink:0:/usr/bin:/plink:0:/root/bin:/plink:0:/root/bin")
 ;;(add-to-list 'tramp-remote-path "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/root/bin")
 
 
-;;(setenv "GIT_ASKPASS" "git-gui--askpass")
-
 ;;(setenv "PATH" (concat "C:\\Users\\jian.wang\\diff\\bin;" (getenv "PATH")))
-;;(setenv "HOME" "c:/Users/jian.wang")
 
 ;;(exec-path-from-shell-setenv "PS1" "[\\u:\\W]$$** ")
-
-
-
-
-
-
-
-
-
-
 
 
 ;;-------------------------------------------------------------------------------------dired 报错先注释掉
@@ -168,9 +142,9 @@
 			   ad-do-it)))))
 
 ;;tab有时无效  C-h k <tab>  查看tab绑定的命令  然后用下面的方式使其生效
-(yas-advise-indent-function 'indent-for-tab-command)
-(yas-advise-indent-function 'symbol-overlay-put)
-(yas-advise-indent-function 'c-indent-line-or-region)
+;;(yas-advise-indent-function 'indent-for-tab-command)
+;;(yas-advise-indent-function 'symbol-overlay-put)
+;;(yas-advise-indent-function 'c-indent-line-or-region)
 
 ;;-------------------------------------------------------------------------------------package
 (setq package-archives '(("melpa" . "http://elpa.emacs-china.org/melpa/")))
@@ -196,7 +170,6 @@
 (setq org-src-fontify-natively t)       ;;高亮org里插入的代码
 
 
-
 ;;-------------------------------------------------------------------------------------Diff
 (add-hook 'ediff-load-hook
           (lambda ()
@@ -211,13 +184,6 @@
 						;; (make-face-italic
              ;; ediff-fine-diff-face-B)
 						))
-
-
-
-
-
-
-
 
 
 

@@ -49,8 +49,8 @@ This function should only modify configuration layer settings."
      git
      org
 		 ;;lsp
-     syntax-checking
-	   treemacs
+     ;;syntax-checking
+	   ;;treemacs
      ;; version-control
      (shell :variables
 						shell-default-height 30
@@ -213,12 +213,12 @@ This function should only modify configuration layer settings."
 
 
 																		;;############################  有error   暂时去掉
+																		auto-yasnippet                ;;临时模板
 																		font-lock+
 																		dired-mode
-
+																		php-auto-yasnippets           ;;php内置函数的yas模板
 
 																		;;############################  保留
-																		;;auto-yasnippet                ;;临时模板
 																		;;bind-map                      ;;在不同的地方给快捷键不同的功能
 																		;;clean-aindent-mode            ;;回车newline-and-indent 无内容则删除indent
 																		;;company-php
@@ -249,7 +249,6 @@ This function should only modify configuration layer settings."
 																		;;org-pomodoro                  ;;org番茄
 																		;;parinfer                      ;;lisp编辑
 																		;;persp-mode                    ;;layout
-																		;;php-auto-yasnippets           ;;php内置函数的yas模板
 																		;;php-extras                    ;;php-mode增强
 																		;;popwin                        ;;管理弹出window
 																		;;pt                            ;;搜索
@@ -720,7 +719,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (pyim pyim-basedict pangu-spacing find-by-pinyin-dired chinese-conv ace-pinyin pinyinlib youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
+    (php-extras youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
