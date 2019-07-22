@@ -25,7 +25,7 @@
 (setq auto-save-default nil)                           ;;不生成 #autosave#
 ;; (setq auto-save-visited-file-name t)                   ;;不生成 .#file_Name
 
-(setq frame-title-format "emacs@%b")                   ;;窗口title显示buffer名
+(setq frame-title-format "emacs@____%b")                   ;;窗口title显示buffer名
 
 (setq tramp-default-method "plink")                    ;;tramp-mode  使用plink
 

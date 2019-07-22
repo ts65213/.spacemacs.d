@@ -45,7 +45,6 @@ This function should only modify configuration layer settings."
 		 ;; ivy
      ;;auto-completion
      better-defaults
-		 chinese
      emacs-lisp
      git
      org
