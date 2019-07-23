@@ -27,9 +27,6 @@
 
 (setq frame-title-format "emacs@____%b")                   ;;窗口title显示buffer名
 
-(setq tramp-default-method "plink")                    ;;tramp-mode  使用plink
-
-
 (setq avy-keys '(?a ?b ?c ?d ?e ?f ?g                  ;;avy-goto-char 的按键
 					?h ?i          ?m ?n
 					?o ?p ?q ?r ?s ?t
