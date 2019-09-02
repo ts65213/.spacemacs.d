@@ -33,23 +33,23 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(go
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
 
-		 ;;go
+		 go
      helm
 		 ;; ivy
-     ;;auto-completion
+     auto-completion
      better-defaults
      emacs-lisp
      git
      org
-		 ;;lsp
-     ;;syntax-checking
+		 lsp
+     syntax-checking
 	   ;;treemacs
      ;; version-control
      (shell :variables
@@ -694,10 +694,12 @@ before packages are loaded."
 
 
 
+
   (add-to-list 'load-path "~/.spacemacs.d/")
   (require 'better-defaults)    ;;默认值
   (require 'my-function)        ;;自定义函数
   (require 'key-binding)        ;;按键绑定
+
 
 
 
@@ -717,10 +719,12 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/work_space/life/Todo.org")))
+ '(org-agenda-files
+	 (quote
+		("~/work_space/life/阅读.org" "~/work_space/life/身体.org" "~/work_space/life/计算机.org" "~/work_space/life/英语.org" "~/work_space/life/琐事.org" "~/work_space/life/理财.org")))
  '(package-selected-packages
 	 (quote
-		(php-extras youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
+		(lsp-mode markdown-mode dash-functional youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
