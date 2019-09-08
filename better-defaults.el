@@ -7,9 +7,9 @@
 ;;(set-default-font "17")					               ;;字体大小
 
 (if (display-graphic-p)
-(dolist (charset '(kana han symbol cjk-misc bopomofo))  ;;中文字体
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset (font-spec :family "KaiTi" :size 20))))
+		(dolist (charset '(kana han symbol cjk-misc bopomofo))  ;;中文字体
+			(set-fontset-font (frame-parameter nil 'font)
+												charset (font-spec :family "KaiTi" :size 20))))
 
 (delete-selection-mode t)                              ;;选中后输入，直接替换选中的内容
 
@@ -28,14 +28,14 @@
 (setq frame-title-format "emacs@____%b")                   ;;窗口title显示buffer名
 
 (setq avy-keys '(?a ?b ?c ?d ?e ?f ?g                  ;;avy-goto-char 的按键
-					?h ?i          ?m ?n
-					?o ?p ?q ?r ?s ?t
-					?u ?v ?w    ?y
-					?l ?k ?j))
+										?h ?i          ?m ?n
+										?o ?p ?q ?r ?s ?t
+										?u ?v ?w    ?y
+										?l ?k ?j))
 
 (setq auto-mode-alist									;;路径中有'views' 使用web-mode
-	(append '(("/views/" . web-mode))
-	 auto-mode-alist))
+			(append '(("/views/" . web-mode))
+							auto-mode-alist))
 
 
 (defun my-cc-style()                                   ;;C++ mode 一些默认值
@@ -85,8 +85,8 @@
 
 (setq ibuffer-saved-filter-groups     ;;分组
       (quote (("default"
-			   ("controller" (filename . "controllers"))
-			   ("models" (filename . "models"))
+							 ("controller" (filename . "controllers"))
+							 ("models" (filename . "models"))
                ("html" (filename . "views"))
                ("javascript" (mode . js2-mode))
                ("css" (mode . css-mode))
@@ -94,7 +94,7 @@
                ("org" (mode . org-mode))
                ("lisp" (mode . emacs-lisp-mode))
                ("conf" (filename . "conf"))
-			   ))))
+							 ))))
 
 (add-hook 'ibuffer-mode-hook
           (lambda ()
@@ -113,31 +113,31 @@
 
 ;;-------------------------------------------------------------------------------------hippie
 (setq hippie-expand-try-functions-list 	;;设定hippie的顺序
-	  '(try-expand-dabbrev
-		try-expand-dabbrev-visible
-		try-expand-dabbrev-all-buffers
-		try-expand-dabbrev-from-kill
-		try-complete-file-name-partially
-		try-complete-file-name
-		try-expand-all-abbrevs
-		try-expand-list
-		try-expand-line
-		try-complete-lisp-symbol-partially
-		try-complete-lisp-symbol))
+			'(try-expand-dabbrev
+				try-expand-dabbrev-visible
+				try-expand-dabbrev-all-buffers
+				try-expand-dabbrev-from-kill
+				try-complete-file-name-partially
+				try-complete-file-name
+				try-expand-all-abbrevs
+				try-expand-list
+				try-expand-line
+				try-complete-lisp-symbol-partially
+				try-complete-lisp-symbol))
 
 ;;-------------------------------------------------------------------------------------yasnippet
 (setq yas-snippet-dirs
-	  '("~/.spacemacs.d/snippets"))  ;;yasnippet模板目录
+			'("~/.spacemacs.d/snippets"))  ;;yasnippet模板目录
 
 (defun yas-advise-indent-function (function-symbol)
   (eval `(defadvice ,function-symbol (around yas-try-expand-first activate)
-		   ,(format
-			 "Try to expand a snippet before point, then call `%s' as usual"
-			 function-symbol)
-		   (let ((yas-fallback-behavior nil))
-			 (unless (and (interactive-p)
-						  (yas-expand))
-			   ad-do-it)))))
+					 ,(format
+						 "Try to expand a snippet before point, then call `%s' as usual"
+						 function-symbol)
+					 (let ((yas-fallback-behavior nil))
+						 (unless (and (interactive-p)
+													(yas-expand))
+							 ad-do-it)))))
 
 ;;tab有时无效  C-h k <tab>  查看tab绑定的命令  然后用下面的方式使其生效
 ;;(yas-advise-indent-function 'indent-for-tab-command)
@@ -152,21 +152,27 @@
 ;;-------------------------------------------------------------------------------------Org
 ;;(org-indent-mode t);;大纲缩进
 
-(setq org-log-done 'time);;TODO完成时添加时间
+;;(setq org-log-done 'time);;TODO完成时添加时间
 
 ;;save the clock history across Emacs sessions
-(setq org-clock-persist 'history)
-(org-clock-persistence-insinuate)
+;;(setq org-clock-persist 'history)
+;;(org-clock-persistence-insinuate)
 
 ;;子TODO都完成时，将父TODO设为DONE,貌似父TODO要有[/]或[%]才有效
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
   (let (org-log-done org-log-states)   ; turn off logging
-	(org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+		(org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
 (setq org-src-fontify-natively t)       ;;高亮org里插入的代码
 
+;;  org-capture
+(setq org-capture-templates
+      '(("i" "inbox" entry (file "~/work_space/life/inbox.org")
+         "* TODO %?\n  %i\n")
+				("d" "dairy" entry (file+datetree "~/work_space/life/diray.org")
+         "* %?\nEntered on %U\n  %i\n")))
 
 ;;-------------------------------------------------------------------------------------Diff
 (add-hook 'ediff-load-hook
@@ -180,7 +186,7 @@
             (set-face-background
              ediff-fine-diff-face-B "black")
 						;; (make-face-italic
-             ;; ediff-fine-diff-face-B)
+						;; ediff-fine-diff-face-B)
 						))
 
 
