@@ -169,9 +169,9 @@
 
 ;;  org-capture
 (setq org-capture-templates
-      '(("i" "inbox" entry (file "~/work_space/life/inbox.org")
+      '(("i" "inbox" entry (file "~/work_space/life/gtd/inbox.org")
          "* TODO %?\n  %i\n")
-				("d" "dairy" entry (file+datetree "~/work_space/life/diray.org")
+				("d" "dairy" entry (file+datetree "~/work_space/life/gtd/diray.org")
          "* %?\nEntered on %U\n  %i\n")))
 
 ;;-------------------------------------------------------------------------------------Diff
