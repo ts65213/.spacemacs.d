@@ -1,12 +1,3 @@
-;;#################################################################################################### 按键
-;;(setq w32-pass-lwindow-to-system nil)
-;;(setq w32-lwindow-modifier 'super) ; Left Windows key
-
-(setq w32-pass-scroll-lock-to-system nil)
-(setq w32-scroll-lock-modifier 'super)																													 ;; s 键
-
-(setq w32-pass-apps-to-system nil)
-(setq w32-apps-modifier 'hyper)																																	 ;; H 键
 
 ;;#################################################################################################### 杂项
 (global-set-key [f12] 'help-command)																														 ;;帮助
@@ -49,8 +40,6 @@
 (global-set-key (kbd "C-o") 'er/expand-region)																									 ;;expand-region
 
 
-(define-key input-decode-map (kbd "C-m") (kbd "S-m"))
-(global-set-key (kbd "S-m") 'er/expand-region)																									 ;;expand-region
 
 (global-set-key "\M-;" 'qiang-comment-dwim-line)																								 ;;注释行尾/行/区域
 (global-set-key (kbd "C-M-;") 'zhushi)																													 ;;自定义的zhushi宏

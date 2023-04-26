@@ -50,8 +50,8 @@ This function should only modify configuration layer settings."
      org
 		 lsp
      syntax-checking
-	   ;;treemacs
-     ;; version-control
+	   treemacs
+     version-control
      (shell :variables
 						shell-default-height 30
 						shell-default-position 'bottom)
@@ -660,11 +660,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; (setq configuration-layer-elpa-archives
 	;; 	'(("stable-elpa"   . "https://github.com/syl20bnr/spacelpa")))
 
-  (setq configuration-layer-elpa-archives
-   			'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
-   				("org-cn"   . "http://elpa.emacs-china.org/org/")
-   				("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
-
+(setq configuration-layer-elpa-archives
+      '(("melpa-cn" . "http://1.15.88.122/melpa/")
+        ("org-cn"   . "http://1.15.88.122/org/")
+        ("gnu-cn"   . "http://1.15.88.122/gnu/")))
   ;;------------------------------------------------------------------------------------------------加快启动速度
   (setq tramp-ssh-controlmaster-options
         "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
@@ -719,12 +718,11 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(evil-want-Y-yank-to-eol nil)
  '(org-agenda-files
-	 (quote
-		("~/work_space/life/gtd/sometime.org" "~/work_space/life/gtd/cyclicity.org")))
+   '("~/work_space/life/gtd/sometime.org" "~/work_space/life/gtd/cyclicity.org"))
  '(package-selected-packages
-	 (quote
-		(lsp-mode markdown-mode dash-functional youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window))))
+   '(browse-at-remote bui git-gutter youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
