@@ -151,6 +151,9 @@
 
 ;;-------------------------------------------------------------------------------------Org
 ;;(org-indent-mode t);;大纲缩进
+(add-hook 'org-mode-hook 'org-indent-mode);;缩进
+(add-hook 'org-mode-hook 'org-superstar-mode);;super star
+;;(org-superstar-mode t);;super star
 
 ;;(setq org-log-done 'time);;TODO完成时添加时间
 
