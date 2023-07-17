@@ -59,6 +59,7 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
+																			multiple-cursors              ;;多光标
 																			)
 
    ;; A list of packages that cannot be updated.
@@ -226,13 +227,14 @@ This function should only modify configuration layer settings."
 																		;;helm-ag                       ;;搜索
 																		;;helm-projectile               ;;项目里搜索文件
 																		;;helm-swoop                    ;;搜索文本
-																		;;hide-comnt                    ;;隐藏/显示注释
+																		hide-comnt                    ;;隐藏/显示注释
+																		term-cursor
+																		org-contrib
 																		;;highlight-parentheses         ;;高亮包裹的括号
 																		;;hungry-delete                 ;;删除连续的空白符
-																		;;info+                         ;;emacs info增强
+																		info+                         ;;emacs info增强
 																		;;js2-mode                      ;;javascript增强mode
 																		;;move-text                     ;;上下移动文本
-																		;;multiple-cursors              ;;多光标
 																		;;mwim                          ;;C-a C-e
 																		;;org-bullets                   ;;改变org标题样式
 																		;;org-download                  ;;拖动图片
@@ -654,7 +656,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
       '(("melpa-cn" . "http://1.15.88.122/melpa/")
         ("org-cn"   . "http://1.15.88.122/org/")
         ("gnu-cn"   . "http://1.15.88.122/gnu/")))
-  ;;------------------------------------------------------------------------------------------------加快启动速度
 
 
 
@@ -707,8 +708,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(evil-want-Y-yank-to-eol nil)
- '(org-agenda-files
-   '("~/work_space/life/gtd/sometime.org" "~/work_space/life/gtd/cyclicity.org"))
+ '(org-agenda-files '("c:/Users/wang.jian06/Desktop/tmp.org"))
  '(package-selected-packages
    '(cnfonts youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window)))
 (custom-set-faces

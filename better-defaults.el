@@ -110,9 +110,11 @@
 
 
 ;;-------------------------------------------------------------------------------------Org
-(setq org-startup-indented t);;大纲缩进
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
-(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)));;不自动换行
+;;(org-indent-mode t);;大纲缩进
+(add-hook 'org-mode-hook 'org-indent-mode);;缩进
+(add-hook 'org-mode-hook 'org-superstar-mode);;super star
+;;(org-superstar-mode t);;super star
+
 ;;(setq org-log-done 'time);;TODO完成时添加时间
 
 ;;save the clock history across Emacs sessions
