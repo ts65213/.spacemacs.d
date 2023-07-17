@@ -33,32 +33,24 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(go
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
 
-		 go
      helm
 		 ;; ivy
-     auto-completion
      better-defaults
-     emacs-lisp
-     git
+
      org
-		 lsp
-     syntax-checking
-	   treemacs
-     version-control
-     (shell :variables
-						shell-default-height 30
-						shell-default-position 'bottom)
 
-
-     )
-
+;		 spacemacs-editing-visual
+;		 spacemacs-editing
+;		 spacemacs-layouts
+;		 spacemacs-org
+)
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
@@ -67,9 +59,6 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
-                                      symbol-overlay
-																			youdao-dictionary
-																			;; parinfer
 																			)
 
    ;; A list of packages that cannot be updated.
@@ -117,6 +106,7 @@ This function should only modify configuration layer settings."
 																		org-brain                       ;;org转为思维导图形式
 																		org-projectile                  ;;org创建和project关联的TODO
 																		orgit                           ;;org里指向magit buffer的链接格式
+																		org-contrib                     ;;不知道什么  报错  包不存在
 
 																		helm-c-yasnippet                ;;helm显示yasnippet的模板
 																		helm-company                    ;;helm显示company的候选项
@@ -665,8 +655,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
         ("org-cn"   . "http://1.15.88.122/org/")
         ("gnu-cn"   . "http://1.15.88.122/gnu/")))
   ;;------------------------------------------------------------------------------------------------加快启动速度
-  (setq tramp-ssh-controlmaster-options
-        "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
 
 
 
@@ -722,7 +710,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-agenda-files
    '("~/work_space/life/gtd/sometime.org" "~/work_space/life/gtd/cyclicity.org"))
  '(package-selected-packages
-   '(browse-at-remote bui git-gutter youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window)))
+   '(cnfonts youdao-dictionary names chinese-word-at-point pos-tip winum which-key web-mode volatile-highlights vi-tilde-fringe use-package symbol-overlay spaceline powerline smartparens rainbow-delimiters popwin php-auto-yasnippets php-mode persp-mode org-pomodoro org-plus-contrib org-mime org-download org-bullets mwim multi-term move-text magit js2-mode hydra hungry-delete highlight-parentheses helm-swoop helm-projectile helm-ag flycheck eyebrowse expand-region exec-path-from-shell evil-search-highlight-persist evil eshell-z eshell-prompt-extras esh-help dumb-jump diminish company-web company-tern clean-aindent-mode bind-map bind-key auto-yasnippet ace-window)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

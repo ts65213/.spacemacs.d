@@ -2,7 +2,6 @@
 ;;#################################################################################################### 杂项
 (global-set-key [f12] 'help-command)																														 ;;帮助
 (global-set-key (kbd "C-x g") 'magit-status)																										 ;;Magit
-(global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point)																 ;;youdao-dictionary
 
 ;;#################################################################################################### file、buffer 等
 (global-set-key (kbd "s-j") 'spacemacs/workspaces-transient-state/eyebrowse-prev-window-config)  ;;上一个workstation
@@ -11,7 +10,6 @@
 (global-set-key (kbd "s-i") 'spacemacs/layouts-transient-state/persp-prev)											 ;;上一个layout
 (global-set-key (kbd "s-k") 'spacemacs/layouts-transient-state/persp-next)											 ;;下一个layout
 
-(global-set-key (kbd "s-t") 'treemacs-toggle)																										 ;;treemacs
 
 ;;(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)														 ;;dired里按回车时，不生成新的buffer
 
@@ -34,8 +32,8 @@
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
 ;;#################################################################################################### 文本
-;;(global-set-key (kbd "C-M-SPC") 'set-mark-command)																						 ;;mark set
-(global-set-key (kbd "C-M-<f11>") 'set-mark-command)																						 ;;mark set
+;; (global-set-key (kbd "C-SPC") 'set-mark-command)																						 ;;mark set
+(global-set-key (kbd "C-<f11>") 'set-mark-command)																						 ;;mark set
 
 (global-set-key (kbd "C-o") 'er/expand-region)																									 ;;expand-region
 
@@ -65,7 +63,7 @@
 (global-set-key (kbd "C-;") 'hippie-expand)																											 ;;hippie-expand
 
 ;;#################################################################################################### 查找、高亮
-(global-set-key (kbd "<C-i>") 'symbol-overlay-put)																							 ;;symbol-overlay
+(global-set-key (kbd "C-<f9>") 'symbol-overlay-put)																							 ;;symbol-overlay
 
 
 
