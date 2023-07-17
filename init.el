@@ -62,6 +62,8 @@ This function should only modify configuration layer settings."
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
+																			multiple-cursors              ;;多光标
+
 																			)
 
    ;; A list of packages that cannot be updated.
@@ -236,7 +238,6 @@ This function should only modify configuration layer settings."
 																		info+                         ;;emacs info增强
 																		;;js2-mode                      ;;javascript增强mode
 																		;;move-text                     ;;上下移动文本
-																		;;multiple-cursors              ;;多光标
 																		;;mwim                          ;;C-a C-e
 																		;;org-bullets                   ;;改变org标题样式
 																		;;org-download                  ;;拖动图片
